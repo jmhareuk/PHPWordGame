@@ -4,8 +4,10 @@ A simple Caesar Cipher to demonstrate the use of encryption and brute-force atta
 
 # Author
 James Hare
-*Email: jameshareuk@gmail.com
-*LinkedIn: https://www.linkedin.com/in/jameshareuk
+
+Email: jameshareuk@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/jameshareuk
 
 
 # Sample Output
