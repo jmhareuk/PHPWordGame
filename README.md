@@ -10,26 +10,26 @@ LinkedIn: https://www.linkedin.com/in/jameshareuk
 
 # Sample Output
 
-**********************************
-**                              **
-**          Welcome to          **
-**       the Caesar Cipher      **
-**                              **
-**********************************
- 
-What would you like to do?
- 
-1. Encrypt a message
-2. Decrypt a message
-3. Quit
- 
-Enter a number to select (1-3): 1
-
-Enter your message: Secret String
-
-Which direction does your secret shift use?
-
-1. Forward
+>**********************************
+>**                              **
+>**          Welcome to          **
+>**       the Caesar Cipher      **
+>**                              **
+>**********************************
+> 
+>What would you like to do?
+> 
+>1. Encrypt a message
+>2. Decrypt a message
+>3. Quit
+> 
+>Enter a number to select (1-3): 1
+>
+>Enter your message: Secret String
+>
+>Which direction does your secret shift use?
+>
+>1. Forward
 2. Back
 
 Enter 1 or 2 indicating the direction: 1
