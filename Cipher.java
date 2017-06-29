@@ -66,7 +66,7 @@ public class Cipher {
         Scanner in = new Scanner(System.in);
         
         try {
-            System.out.println("Which direction would you like to shift your message?");
+            System.out.println("Which direction does your secret shift use?");
             System.out.println("");
             System.out.println("1. Forward");
             System.out.println("2. Back");
