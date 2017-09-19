@@ -1,14 +1,10 @@
-# CaesarCipher
-A simple Caesar Cipher to demonstrate the use of encryption and brute-force attacks to Students of Information Security
+# PHP Word Game
+A word game using PHP concepts. Allows the user to specifiy a number (from 2 - 6) of random letters. The game will then create all permutations and substrings of those letters, which are then checked against a dictionary file for possible words. Finally, the user is shown all words that can be made from the randomly selected letters.
 
 
-# Author
+# Authors
+Caleb Ooten
 James Hare
+Jeremiah Roland
+Elia Jada
 
-Email: jameshareuk@gmail.com
-
-LinkedIn: https://www.linkedin.com/in/jameshareuk
-
-
-# Sample Output
-See SampleOutput.txt file
