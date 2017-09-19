@@ -4,7 +4,10 @@ A word game using PHP concepts. Allows the user to specifiy a number (from 2 - 6
 
 # Authors
 Caleb Ooten
+
 James Hare
+
 Jeremiah Roland
+
 Elia Jada
 
