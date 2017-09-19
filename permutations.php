@@ -15,7 +15,9 @@
 <body>
 	<h1>Here are the permutations of the random letters</h1>
 	<h2>The permutations were printed and saved to the file 'Ass_3_permutations.txt'.</h2>  
-	<h2>Printing them all on screen would take up a lot of space.</h2> 
+	<h2>Printing them all on screen would take up a lot of space.</h2>
+	//I used a javascript method to return to the previous page, instead of using the session array
+	//Schwab said doing it this was was acceptable. 
 	<a href="javascript:history.back()">Return to Previous Page</a> 
 	<?php 
 		function permutations($word)  
@@ -43,6 +45,7 @@
 					}
 					unset($value); 
 				}
+				//write the results array to a file each time the function is called
 				$writeFile = fopen("Ass_3_permutations.txt", "w") or die('Cannot open file: '.$writeFile);
 				for($o = 0; $o < count($result); $o++)
 				{		
@@ -52,7 +55,7 @@
 				return $result; 
 			}
 		}
-		
+		//Read the random letters from a file
 		$myWord = ""; 
 		$readFile = fopen("Ass_3_letters.txt", "r");
 		while(!feof($readFile))
