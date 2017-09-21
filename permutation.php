@@ -1,34 +1,41 @@
 <?php
+$writeFile = fopen("perms.txt", "w");
+fclose($writeFile);
 echo '<h1>Word Game</h1>';
 $myfile = fopen("letters.txt", "r");
 
-$letterString = fread($myfile, filesize("letters.txt"));
-echo 'Your letters are: ' . $letterString;
+$word = fread($myfile, filesize("letters.txt"));
+echo 'Your letters are: ' . $word;
 fclose($myfile);
-$LetterArray = str_split($letterString);
 echo '<br>';
 echo "All permutations: <br>";
-$permfile = fopen("perms.txt", "w");
-fclose($permfile);
 
+function permutations($word) {
+    $result = array();
+    if (strlen($word) <= 1) {
+        $result[] = $word;
+        return $result;
+    } else {
+        for ($i = 0; $i < strlen($word); $i++) {
+            $shorter = substr($word, 0, $i) . substr($word, $i + 1);
+            $shorterPerms = array();
+            $shorterPerms[] = permutations($shorter);
 
-function pc_permute($items, $perms = array( )) {
-    $permfile = fopen("perms.txt", "a");
-    if (empty($items)) { 
-        print join('', $perms) . "<br>";
-        fwrite($permfile, join('', $perms));
-        fwrite($permfile, "\n");
-    }  else {
-        for ($i = count($items) - 1; $i >= 0; --$i) {
-             $newitems = $items;
-             $newperms = $perms;
-             list($foo) = array_splice($newitems, $i, 1);
-             array_unshift($newperms, $foo);
-             pc_permute($newitems, $newperms);
-         }
+            foreach ($shorterPerms as $value) {
+                for ($j = 0; $j < count($value); $j++) {
+                    $result[] = $word[$i] . $value[$j];
+                }
+            }
+            unset($value);
+        }
+        //write the results array to a file each time the function is called
+        $writeFile = fopen("perms.txt", "w") or die('Cannot open file: ' . $writeFile);
+        for ($o = 0; $o < count($result); $o++) {
+            fwrite($writeFile, $result[$o] . "\r\n");
+        }
+        fclose($writeFile);
+        return $result;
     }
-    fclose($permfile);
 }
-
-pc_permute($LetterArray);
-echo '<br><br><button onclick="history.go(-1);">Back</button>';
+echo nl2br(file_get_contents( "perms.txt" ));
+permutations($word);
