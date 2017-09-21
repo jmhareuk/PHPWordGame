@@ -19,7 +19,7 @@
 		{
 			//compare the contents of possibleWords(a) and dictionary(b) 
 			//if they are equal, save the contents to the wordHolder array 
-			//to avoid duplicates, make it an associative array and have the word be the key and value 
+			//to avoid duplicates, make wordHolder an associative array and have the word be the key and value 
 		}
 	}
 ?> 
